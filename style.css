@@ -119,7 +119,7 @@ main > section > img {
   border-radius: 4px;
 }
 
-main > ul {
+main > .product-list {
   width: 100%;
 
   list-style-type: none;
@@ -132,7 +132,7 @@ main > ul {
   flex-wrap: wrap;
 }
 
-main > ul > li {
+main > .product-list > li {
   background-color: white;
 
   width: fit-content;
@@ -156,33 +156,50 @@ main > ul > li {
   box-shadow: inset 0px 0px 18px -6px rgba(0, 0, 0, 0.66);
 }
 
-main > ul > li:hover {
+main > .product-list > li:hover {
   transform: translate(2px, 2px);
 }
 
-main > ul > li > img {
+main > .product-list > li > img {
   width: 250px;
 }
 
-main > ul > li > h3 {
+main > .product-list > li > h3 {
   width: 100%;
   font-weight: 300;
   margin: 0px;
   padding: 0px;
 }
 
-main > ul > li > h4 {
+main > .product-list > li > h4 {
   width: 100%;
   font-weight: 500;
   margin: 0px;
   padding: 0px;
 }
 
-main > ul > li > p {
+main > .product-list > li > p {
   display: none;
   width: 100%;
   font-size: 0.8rem;
   position: relative;
+}
+
+.contact-list {
+  list-style: none;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 0px;
+  padding: 0px 0px 0px 16px;
+}
+.contact-list > li {
+  margin: 8px;
+  font-size: 1.3rem;
 }
 
 footer {
