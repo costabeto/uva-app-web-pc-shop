@@ -91,15 +91,54 @@ main {
   padding: 16px;
 }
 
+.card {
+  max-width: 100%;
+  width: 600px;
+
+  border-radius: 4px 4px 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 16px;
+
+  background-color: #ededed;
+}
+
+.card + .card {
+  border-radius: 0px 0px 0px 0px;
+}
+
+.card:last-child {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card > img {
+  width: 100%;
+  max-width: 500px;
+
+  border-radius: 4px;
+}
+
+.card > div {
+  color: black;
+}
+
 main > section {
   width: 100%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+}
+
+main > section > div {
+  max-width: 50%;
 }
 
 main > section:nth-child(2n) {
