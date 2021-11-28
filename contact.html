@@ -12,6 +12,21 @@
     />
     <title>PC Shop</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script>
+      function clearForm(e) {
+        e.preventDefault();
+
+        const shouldClear = window.confirm(
+          'Deseja realmente limpar o formulário?'
+        );
+
+        if (!!shouldClear) {
+          const form = document.getElementById('contact-form');
+          form.reset();
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -28,19 +43,42 @@
     <main>
       <h1>Contato</h1>
 
-      <ul class="contact-list">
-        <li>Whatsapp (xx) xxxx-xxxx</li>
-        <li>Telefone (xx) xxxx-xxxx</li>
-        <li>
-          <a target="_blank" href="https://www.facebook.com/"> Facebook </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://www.instagram.com/">Instagram</a>
-        </li>
-        <li>
-          <a target="_blank" href="https://www.twitter.com/">Twitter</a>
-        </li>
-      </ul>
+      <p>
+        Preencha o formulário para entrar em contato, responderemos o mais
+        rápido possível
+      </p>
+
+      <p>
+        Entre em contato também pelo telefone <strong>(xx) xxxx-xxxx</strong>
+      </p>
+
+      <form
+        action="#"
+        id="contact-form"
+        onsubmit="alert('Obrigado pelo contato!');"
+      >
+        <input required type="text" name="name" id="name" placeholder="Nome" />
+        <input
+          required
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Assunto"
+        />
+        <textarea
+          required
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Mensagem"
+        ></textarea>
+        <div>
+          <button type="submit">Enviar</button>
+          <button type="reset" class="reset" onclick="clearForm(event);">
+            Limpar
+          </button>
+        </div>
+      </form>
     </main>
 
     <footer>

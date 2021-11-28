@@ -32,6 +32,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 a,
 a:active,
 a:visited {
@@ -185,21 +189,66 @@ main > .product-list > li > p {
   position: relative;
 }
 
-.contact-list {
-  list-style: none;
-  height: 300px;
-
+form {
+  width: fit-content;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-
-  margin: 0px;
-  padding: 0px 0px 0px 16px;
 }
-.contact-list > li {
-  margin: 8px;
-  font-size: 1.3rem;
+
+form > input,
+form > textarea {
+  width: 100%;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+
+  margin: 8px 0px;
+}
+
+form > textarea {
+  width: 100%;
+  min-width: 250px;
+  max-height: 300px;
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+form > div > button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+
+  background-color: #6679b0;
+  color: white;
+
+  transition: opacity 0.2s;
+}
+
+form > div > .reset {
+  background-color: white;
+  color: #374366;
+}
+
+form > div > button:hover {
+  opacity: 0.6;
+}
+form > div > button:active {
+  opacity: 1;
 }
 
 footer {
